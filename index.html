@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Innovation Hackathon 2026 | TCS & Bannari Amman Institute of
+Technology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800
+;900&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+/* TCS Midnight Theme Palette */
+--bg-midnight: #030a16;
+--bg-surface: #0a192f;
+--bg-card: rgba(13, 27, 54, 0.78);
+--bg-card-hover: rgba(19, 39, 78, 0.88);
+--bg-modal: #081426;
+--border-subtle: rgba(56, 189, 248, 0.16);
+--border-highlight: rgba(56, 189, 248, 0.45);
+--border-amber: rgba(245, 158, 11, 0.45);
+--tcs-blue: #0076CE;
+--tcs-cyan: #00d2ff;
+--tcs-sky: #38bdf8;
+--tcs-amber: #f59e0b;
+--tcs-gold: #fbbf24;
+--text-primary: #ffffff;
+--text-secondary: #cbd5e1;
+--text-muted: #94a3b8;
+--text-subtle: #64748b;
+--font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+--font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+background-color: var(--bg-midnight);
+color: var(--text-primary);
+font-family: var(--font-body);
+line-height: 1.6;
+overflow-x: hidden;
+min-height: 100vh;
+position: relative;
+}
+/* Dynamic TCS Fluid Ribbon Waves Background (without 5 Layer enterprise tech
+stack) */
+.bg-wave-canvas {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+overflow: hidden;
+pointer-events: none;
+background: radial-gradient(circle at 50% 25%, #0e274e 0%, #051329 50%, #030a16
+100%);
+}
+.wave-svg {
+position: absolute;
+top: 80px;
+left: 0;
+width: 200%;
+height: 540px;
+opacity: 0.88;
+animation: waveFlow 22s ease-in-out infinite alternate;
+}
+@keyframes waveFlow {
+0% { transform: translateX(0) translateY(0) scaleY(1); }
+50% { transform: translateX(-20%) translateY(-15px) scaleY(1.04); }
+100% { transform: translateX(-40%) translateY(10px) scaleY(0.97); }
+}
+.container {
+max-width: 1340px;
+margin: 0 auto;
+padding: 0 28px;
+}
+/* Top Sticky Navigation Bar */
+header {
+background: rgba(3, 10, 22, 0.94);
+backdrop-filter: blur(16px);
+border-bottom: 1px solid rgba(56, 189, 248, 0.18);
+position: sticky;
+top: 0;
+z-index: 70;
+}
+.nav-wrapper {
+padding: 14px 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 28px;
+}
+/* ========================================================
+TOP LEFT: CLEAN TCS BRAND LOGO (DOT REMOVED)
+======================================================== */
+.tcs-brand-container {
+display: inline-flex;
+align-items: center;
+gap: 14px;
+text-decoration: none;
+flex-shrink: 0;
+}
+.tcs-brand-mark {
+font-family: var(--font-heading);
+font-size: 34px;
+font-weight: 800;
+letter-spacing: -2px;
+color: #ffffff;
+line-height: 1;
+display: flex;
+align-items: baseline;
+}
+.tcs-brand-divider {
+width: 2px;
+height: 28px;
+background: rgba(56, 189, 248, 0.35);
+}
+.tcs-brand-text {
+display: flex;
+flex-direction: column;
+}
+.tcs-corp-tata {
+font-size: 13px;
+font-weight: 900;
+letter-spacing: 3px;
+color: #ffffff;
+line-height: 1.1;
+font-family: var(--font-heading);
+}
+.tcs-corp-sub {
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 1.1px;
+color: #94a3b8;
+line-height: 1.2;
+}
+/* ========================================================
+TOP RIGHT: TECH DAY EVENT SPECIFICATION HEADER
+Comfortably shifted inward away from the right screen edge
+======================================================== */
+.event-meta-right {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+text-align: right;
+gap: 3px;
+padding-right: 18px; /* Clean inward spacing */
+max-width: 650px;
+}
+.event-tag-title {
+font-size: 13px;
+font-weight: 800;
+letter-spacing: 1.1px;
+text-transform: uppercase;
+color: #ffffff;
+line-height: 1.3;
+}
+.event-tag-date {
+font-size: 12.5px;
+font-weight: 800;
+letter-spacing: 1.4px;
+color: var(--tcs-amber);
+text-transform: uppercase;
+}
+.event-tag-details {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1px;
+color: var(--tcs-sky);
+text-transform: uppercase;
+}
+/* Hero Section */
+.hero-section {
+padding: 40px 0 28px 0;
+}
+.hero-header-meta {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+margin-bottom: 20px;
+}
+.badge-engineering {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 6px 14px;
+background: rgba(0, 210, 255, 0.1);
+border: 1px solid rgba(0, 210, 255, 0.3);
+border-radius: 9999px;
+color: var(--tcs-cyan);
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 1.2px;
+text-transform: uppercase;
+}
+.badge-engineering .pulsing-dot {
+width: 7px;
+height: 7px;
+background: var(--tcs-cyan);
+border-radius: 50%;
+box-shadow: 0 0 10px var(--tcs-cyan);
+animation: pulseAnim 2s infinite;
+}
+@keyframes pulseAnim {
+0%, 100% { opacity: 1; transform: scale(1); }
+50% { opacity: 0.35; transform: scale(0.8); }
+}
+.hero-heading {
+font-family: var(--font-heading);
+font-size: clamp(38px, 4.8vw, 66px);
+font-weight: 800;
+line-height: 1.08;
+letter-spacing: -1.5px;
+color: #ffffff;
+margin-bottom: 14px;
+text-shadow: 0 2px 20px rgba(0, 118, 206, 0.3);
+}
+.hero-tagline {
+font-size: clamp(20px, 2.2vw, 28px);
+font-weight: 700;
+color: #e2e8f0;
+margin-bottom: 16px;
+letter-spacing: -0.4px;
+}
+.hero-tagline .highlight {
+color: var(--tcs-cyan);
+}
+.hero-intro-text {
+font-size: 16.5px;
+color: var(--text-secondary);
+max-width: 860px;
+margin-bottom: 30px;
+line-height: 1.65;
+}
+/* Core Foundation Banner (Verbatim from Source) */
+.foundation-box {
+background: rgba(10, 25, 47, 0.72);
+border: 1px solid rgba(56, 189, 248, 0.25);
+border-left: 5px solid var(--tcs-cyan);
+border-radius: 12px;
+padding: 18px 24px;
+margin-bottom: 44px;
+backdrop-filter: blur(12px);
+box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+.foundation-box p {
+font-size: 15px;
+color: #e2e8f0;
+line-height: 1.6;
+}
+.foundation-box strong {
+color: var(--tcs-cyan);
+font-weight: 800;
+}
+/* Catalogue Bar */
+.catalogue-nav-row {
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+margin-bottom: 24px;
+flex-wrap: wrap;
+gap: 20px;
+border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+padding-bottom: 20px;
+}
+.catalogue-title-area h2 {
+font-family: var(--font-heading);
+font-size: 32px;
+font-weight: 800;
+letter-spacing: -0.8px;
+color: #ffffff;
+margin-bottom: 4px;
+}
+.catalogue-title-area p {
+color: var(--text-muted);
+font-size: 14.5px;
+}
+.action-modal-btn-group {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+}
+.btn-action-modal {
+padding: 10px 18px;
+border-radius: 8px;
+font-size: 13.5px;
+font-weight: 700;
+cursor: pointer;
+transition: all 0.2s ease;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: rgba(13, 27, 54, 0.85);
+border: 1px solid rgba(56, 189, 248, 0.3);
+color: #ffffff;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-action-modal:hover {
+background: rgba(0, 118, 206, 0.3);
+border-color: var(--tcs-cyan);
+color: var(--tcs-cyan);
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(0, 210, 255, 0.25);
+}
+.btn-action-modal.primary {
+background: linear-gradient(135deg, #0076CE 0%, #00529b 100%);
+border-color: rgba(56, 189, 248, 0.4);
+}
+.btn-action-modal.primary:hover {
+background: linear-gradient(135deg, #0088eb 0%, #0066c0 100%);
+border-color: var(--tcs-cyan);
+color: #ffffff;
+}
+/* Filter Pills */
+.filter-pills {
+display: flex;
+gap: 10px;
+margin-bottom: 28px;
+overflow-x: auto;
+padding-bottom: 4px;
+}
+.filter-btn {
+padding: 8px 18px;
+background: rgba(10, 25, 47, 0.6);
+border: 1px solid rgba(56, 189, 248, 0.2);
+border-radius: 9999px;
+color: var(--text-secondary);
+font-size: 13px;
+font-weight: 700;
+cursor: pointer;
+transition: all 0.2s;
+white-space: nowrap;
+}
+.filter-btn:hover {
+border-color: var(--tcs-sky);
+color: #ffffff;
+}
+.filter-btn.active {
+background: var(--tcs-blue);
+border-color: var(--tcs-cyan);
+color: #ffffff;
+box-shadow: 0 0 16px rgba(0, 118, 206, 0.5);
+}
+/* 3 Themes Grid */
+.themes-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 24px;
+margin-bottom: 70px;
+}
+@media (max-width: 1100px) {
+.themes-container {
+grid-template-columns: 1fr;
+}
+}
+.theme-col {
+background: var(--bg-card);
+border: 1px solid var(--border-subtle);
+border-radius: 16px;
+padding: 24px;
+backdrop-filter: blur(14px);
+box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+display: flex;
+flex-direction: column;
+transition: all 0.3s;
+}
+.theme-col:hover {
+border-color: var(--border-highlight);
+box-shadow: 0 16px 48px rgba(0, 118, 206, 0.25);
+}
+.theme-badge-label {
+display: inline-block;
+padding: 4px 10px;
+border-radius: 6px;
+font-size: 11px;
+font-weight: 800;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+.theme-tech .theme-badge-label {
+background: rgba(0, 210, 255, 0.15);
+color: var(--tcs-cyan);
+border: 1px solid rgba(0, 210, 255, 0.3);
+}
+.theme-business .theme-badge-label {
+background: rgba(168, 85, 247, 0.15);
+color: #c084fc;
+border: 1px solid rgba(168, 85, 247, 0.3);
+}
+.theme-impact .theme-badge-label {
+background: rgba(34, 197, 94, 0.15);
+color: #4ade80;
+border: 1px solid rgba(34, 197, 94, 0.3);
+}
+.theme-head-title {
+font-family: var(--font-heading);
+font-size: 23px;
+font-weight: 800;
+color: #ffffff;
+margin-bottom: 4px;
+}
+.theme-head-sub {
+font-size: 13px;
+color: var(--text-muted);
+margin-bottom: 18px;
+border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+padding-bottom: 14px;
+}
+/* Challenge Entry Cards */
+.challenge-stack {
+display: flex;
+flex-direction: column;
+gap: 12px;
+flex-grow: 1;
+}
+.challenge-entry {
+background: rgba(10, 25, 47, 0.65);
+border: 1px solid rgba(56, 189, 248, 0.15);
+border-radius: 10px;
+padding: 16px;
+cursor: pointer;
+transition: all 0.2s ease;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.challenge-entry:hover {
+background: var(--bg-card-hover);
+border-color: var(--tcs-cyan);
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(0, 210, 255, 0.15);
+}
+.challenge-entry-top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 8px;
+}
+.challenge-domain-tag {
+font-size: 11px;
+font-weight: 800;
+letter-spacing: 0.6px;
+text-transform: uppercase;
+color: var(--tcs-sky);
+}
+.challenge-arrow {
+color: var(--text-muted);
+font-size: 15px;
+font-weight: 700;
+transition: transform 0.2s, color 0.2s;
+}
+.challenge-entry:hover .challenge-arrow {
+transform: translateX(4px);
+color: var(--tcs-cyan);
+}
+.challenge-entry-title {
+font-size: 14.5px;
+font-weight: 700;
+color: #ffffff;
+line-height: 1.35;
+margin-bottom: 8px;
+}
+.challenge-tags-row {
+display: flex;
+flex-wrap: wrap;
+gap: 6px;
+}
+.challenge-tag {
+font-size: 10.5px;
+padding: 2px 7px;
+background: rgba(255, 255, 255, 0.08);
+border-radius: 4px;
+color: #94a3b8;
+font-weight: 600;
+}
+/* Modal System */
+.modal-backdrop {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(2, 6, 14, 0.82);
+backdrop-filter: blur(12px);
+z-index: 1000;
+display: none;
+align-items: center;
+justify-content: center;
+padding: 20px;
+}
+.modal-backdrop.is-active {
+display: flex;
+}
+.modal-card {
+background: var(--bg-modal);
+border: 1px solid rgba(56, 189, 248, 0.35);
+border-radius: 16px;
+width: 100%;
+max-width: 880px;
+max-height: 88vh;
+display: flex;
+flex-direction: column;
+box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7), 0 0 35px rgba(0, 118, 206, 0.25);
+overflow: hidden;
+animation: modalSlide 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes modalSlide {
+from { transform: scale(0.96) translateY(8px); opacity: 0; }
+to { transform: scale(1) translateY(0); opacity: 1; }
+}
+/* Challenge Modal Header Styling */
+.modal-head {
+padding: 24px 28px 20px 28px;
+border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+background: rgba(10, 25, 47, 0.85);
+display: flex;
+flex-direction: column;
+gap: 16px;
+position: relative;
+}
+.modal-head-row-top {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 16px;
+}
+.modal-challenge-h3 {
+font-family: var(--font-heading);
+font-size: 22px;
+font-weight: 800;
+color: #ffffff;
+line-height: 1.25;
+letter-spacing: -0.4px;
+}
+.modal-dismiss-btn {
+background: rgba(255, 255, 255, 0.08);
+border: 1px solid rgba(255, 255, 255, 0.15);
+color: #cbd5e1;
+width: 34px;
+height: 34px;
+border-radius: 50%;
+cursor: pointer;
+font-size: 22px;
+line-height: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 0.2s;
+flex-shrink: 0;
+}
+.modal-dismiss-btn:hover {
+background: rgba(239, 68, 68, 0.2);
+border-color: #ef4444;
+color: #ef4444;
+}
+/* Structured Aligned Meta Grid for Theme, Domain, Tags */
+.challenge-meta-grid {
+display: flex;
+flex-direction: column;
+gap: 8px;
+background: rgba(4, 12, 26, 0.6);
+padding: 14px 18px;
+border-radius: 10px;
+border: 1px solid rgba(56, 189, 248, 0.2);
+}
+.meta-line {
+display: grid;
+grid-template-columns: 85px 1fr;
+align-items: baseline;
+gap: 12px;
+}
+.meta-label-tag {
+font-size: 11px;
+font-weight: 800;
+letter-spacing: 1.2px;
+text-transform: uppercase;
+color: var(--tcs-sky);
+display: flex;
+align-items: center;
+gap: 5px;
+}
+.meta-label-tag::after {
+content: ":";
+}
+.meta-value-text {
+font-size: 13.5px;
+font-weight: 600;
+color: #f1f5f9;
+line-height: 1.4;
+}
+.meta-tags-flex {
+display: flex;
+flex-wrap: wrap;
+gap: 6px;
+}
+.meta-tag-chip {
+font-size: 11.5px;
+font-weight: 600;
+padding: 2px 9px;
+border-radius: 4px;
+background: rgba(56, 189, 248, 0.12);
+color: #e0f2fe;
+border: 1px solid rgba(56, 189, 248, 0.25);
+}
+.modal-scroll-area {
+padding: 28px;
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+gap: 22px;
+color: var(--text-secondary);
+font-size: 14.5px;
+}
+.modal-section {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+.modal-section-h {
+font-size: 13px;
+font-weight: 800;
+letter-spacing: 1px;
+text-transform: uppercase;
+color: var(--tcs-cyan);
+display: flex;
+align-items: center;
+gap: 6px;
+}
+.modal-section-h::before {
+content: "";
+width: 4px;
+height: 14px;
+background: var(--tcs-cyan);
+border-radius: 2px;
+display: inline-block;
+}
+.modal-scroll-area p {
+line-height: 1.65;
+color: #e2e8f0;
+}
+.modal-scroll-area ul {
+margin-left: 20px;
+display: flex;
+flex-direction: column;
+gap: 6px;
+}
+.modal-scroll-area li {
+line-height: 1.55;
+color: #cbd5e1;
+}
+.callout-box {
+border-radius: 8px;
+padding: 14px 18px;
+font-size: 14px;
+line-height: 1.55;
+}
+.callout-warning {
+background: rgba(245, 158, 11, 0.12);
+border: 1px solid rgba(245, 158, 11, 0.35);
+color: #fef08a;
+}
+.callout-danger {
+background: rgba(239, 68, 68, 0.12);
+border: 1px solid rgba(239, 68, 68, 0.35);
+color: #fecaca;
+}
+.callout-info {
+background: rgba(56, 189, 248, 0.1);
+border: 1px solid rgba(56, 189, 248, 0.25);
+color: #bae6fd;
+}
+.modal-foot {
+padding: 14px 28px;
+border-top: 1px solid rgba(56, 189, 248, 0.2);
+background: rgba(10, 25, 47, 0.7);
+display: flex;
+justify-content: flex-end;
+}
+/* Footer */
+footer {
+border-top: 1px solid rgba(56, 189, 248, 0.15);
+padding: 32px 0;
+color: var(--text-muted);
+font-size: 13px;
+text-align: center;
+background: #020710;
+}
+footer strong {
+color: #ffffff;
+}
+/* ===========================
+EVALUATION CONTENT
+=========================== */
+.evaluation-stage {
+margin-bottom: 26px;
+}
+.evaluation-stage:last-child {
+margin-bottom: 5px;
+}
+.evaluation-title {
+margin: 0 0 7px 0;
+color: var(--tcs-sky);
+font-size: 17px;
+font-weight: 700;
+}
+.evaluation-desc {
+margin: 0 0 12px 0;
+line-height: 1.55;
+font-size: 14px;
+}
+/* ===========================
+TABLE
+=========================== */
+.evaluation-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 10px;
+font-size: 14px;
+}
+.evaluation-table th,
+.evaluation-table td {
+border: 1px solid #d9dee5;
+padding: 10px 12px;
+text-align: left;
+vertical-align: middle;
+}
+.evaluation-table th {
+background: #f3f5f7;
+color: #333;
+font-weight: 700;
+}
+/* Score column */
+.evaluation-table th:last-child,
+.evaluation-table td:last-child {
+width: 80px;
+text-align: center;
+font-weight: 700;
+}
+/* Total row */
+.evaluation-total {
+background: #f6f8fa;
+}
+.evaluation-total td {
+color: #222;
+}
+/* ===========================
+MOBILE VIEW
+=========================== */
+@media (max-width: 600px) {
+.evaluation-stage {
+margin-bottom: 24px;
+}
+.evaluation-title {
+font-size: 15px;
+line-height: 1.4;
+}
+.evaluation-desc {
+font-size: 13px;
+line-height: 1.5;
+}
+/* Convert table to mobile cards */
+.evaluation-table,
+.evaluation-table tbody,
+.evaluation-table tr,
+.evaluation-table td {
+display: block;
+width: 100%;
+box-sizing: border-box;
+}
+/* Header not required in mobile */
+.evaluation-table thead {
+display: none;
+}
+/* Each row becomes a small card */
+.evaluation-table tr {
+position: relative;
+margin-bottom: 7px;
+padding:
+10px
+55px
+10px
+10px;
+border: 1px solid #d9dee5;
+border-radius: 6px;
+background: #fff;
+}
+.evaluation-table td {
+border: none;
+padding: 0;
+}
+/* Category */
+.evaluation-table td:first-child {
+padding-right: 5px;
+font-size: 13px;
+line-height: 1.4;
+}
+/* Score */
+.evaluation-table td:last-child {
+position: absolute;
+right: 9px;
+top: 50%;
+transform: translateY(-50%);
+width: 38px;
+padding: 5px 3px;
+text-align: center;
+border-radius: 5px;
+background: #eef6ff;
+color: #1769aa;
+font-size: 13px;
+font-weight: 700;
+}
+/* Total row */
+.evaluation-table tr.evaluation-total {
+background: #f3f5f7;
+border-color: #c9d1da;
+}
+.evaluation-table tr.evaluation-total td:last-child {
+background: var(--tcs-sky);
+color: #fff;
+}
+}
+
+/* Responsive layout fixes */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; overflow-x: hidden; }
+img, svg { max-width: 100%; }
+.container, .page-container, main { max-width: 100%; }
+.modal-backdrop { padding: 16px; overflow-y: auto; }
+.modal-card { width: min(100%, 920px); max-height: calc(100dvh - 32px); display: flex; flex-direction: column; overflow: hidden; }
+.modal-scroll-area { min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+@media (max-width: 760px) {
+  body { font-size: 14px; }
+  .container { width: 100% !important; padding-left: 16px !important; padding-right: 16px !important; }
+  .catalogue-nav-row { align-items: stretch; flex-direction: column; gap: 14px; }
+  .action-modal-btn-group { display: flex; flex-wrap: wrap; width: 100%; gap: 8px; }
+  .action-modal-btn-group button { flex: 1 1 150px; min-width: 0; white-space: normal; }
+  .filter-pills { flex-wrap: wrap; gap: 8px; }
+  .theme-grid, .themes-grid { grid-template-columns: 1fr !important; }
+  .theme-col { min-width: 0; width: 100%; }
+  .challenge-entry { width: 100%; }
+  .modal-backdrop { padding: 8px; align-items: flex-start; }
+  .modal-card { width: 100%; max-height: calc(100dvh - 16px); border-radius: 14px; }
+  .modal-head, .modal-scroll-area, .modal-foot { padding-left: 16px !important; padding-right: 16px !important; }
+  .modal-head-row-top { gap: 10px; align-items: flex-start; }
+  .modal-challenge-h3 { overflow-wrap: anywhere; }
+  .modal-section, .callout-box { overflow-wrap: anywhere; }
+}
+@media (max-width: 420px) {
+  .action-modal-btn-group button { flex-basis: 100%; }
+  .hero-intro-text { font-size: 14px; line-height: 1.55; }
+}
+
+</style>
+</head>
+<body>
+<!-- Animated Dynamic TCS Midnight Wave Canvas -->
+<div class="bg-wave-canvas">
+<svg class="wave-svg" viewBox="0 0 1600 500" fill="none"
+xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="tcsBlueWave" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#00d2ff" stop-opacity="0.25" />
+<stop offset="50%" stop-color="#0076CE" stop-opacity="0.8" />
+<stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3" />
+</linearGradient>
+<linearGradient id="tcsAmberWave" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3" />
+<stop offset="50%" stop-color="#fbbf24" stop-opacity="0.95" />
+<stop offset="100%" stop-color="#d97706" stop-opacity="0.4" />
+</linearGradient>
+</defs>
+<!-- Multi-layer Cyan & Royal Blue Wave Band -->
+<path d="M0 240 C300 160, 520 340, 800 230 C1080 120, 1300 310, 1600 220"
+stroke="url(#tcsBlueWave)" stroke-width="4.5" stroke-linecap="round" fill="none" />
+<path d="M0 255 C290 175, 510 355, 800 245 C1090 135, 1290 325, 1600 235"
+stroke="#38bdf8" stroke-width="1.8" stroke-opacity="0.4" fill="none" />
+<path d="M0 270 C280 190, 500 370, 800 260 C1100 150, 1280 340, 1600 250"
+stroke="#0076CE" stroke-width="1.2" stroke-opacity="0.3" fill="none" />
+<path d="M0 285 C270 205, 490 385, 800 275 C1110 165, 1270 355, 1600 265"
+stroke="#0284c7" stroke-width="1" stroke-opacity="0.2" fill="none" />
+<!-- Glowing Amber Ribbon Wave Line -->
+<path d="M0 230 C320 170, 540 330, 800 240 C1060 150, 1280 290, 1600 215"
+stroke="url(#tcsAmberWave)" stroke-width="3" stroke-linecap="round" fill="none" />
+</svg>
+</div>
+<!-- Header with Clean TCS Logo on Left & Tech Day Event Meta on Right -->
+<header>
+<div class="container nav-wrapper">
+<!-- Top Left: Clean TCS Logo (Blue Dot Removed) -->
+<a href="#" class="tcs-brand-container" title="Tata Consultancy Services">
+<div class="tcs-brand-mark" >
+tcs
+</div>
+<div class="tcs-brand-divider"></div>
+<div class="tcs-brand-text">
+<span class="tcs-corp-tata">TATA</span>
+<span class="tcs-corp-sub">CONSULTANCY SERVICES</span>
+</div>
+</a>
+<!-- Top Right: TECH DAY @ BANNARI AMMAN INSTITUTE OF TECHNOLOGY (Cleaned
+& Padded Inward) -->
+<div class="event-meta-right">
+<div class="event-tag-title">TECH DAY @ BANNARI AMMAN INSTITUTE OF
+TECHNOLOGY</div>
+<div class="event-tag-date">31 OCTOBER 2026</div>
+<div class="event-tag-details">15 CHALLENGES &middot; 3 THEMES &middot; 4
+HOURS</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<main class="container">
+<section class="hero-section">
+<!-- Top Meta Badge (Yellow Box Duplicate Removed) -->
+<div class="hero-header-meta">
+<div class="badge-engineering">
+<span class="pulsing-dot"></span>
+AI ENGINEERING HACKATHON
+</div>
+</div>
+<h1 class="hero-heading">Igniting Action through Intelligence</h1>
+<p class="hero-tagline">Beyond Prompts. Beyond Predictions. <span
+class="highlight">Build Intelligent Action.</span></p>
+<p class="hero-intro-text">
+Explore real-world challenges that demand more than an answer. Build AI systems
+that understand evidence, make reasoned decisions and deliver measurable outcomes
+across Technology, Business and Impact.
+</p>
+<!-- Foundational Bar (Verbatim Text & Bold from Document) -->
+<div class="foundation-box">
+<p>
+Build AI that can <strong>Reason</strong>. <strong>Plan</strong>.
+<strong>Act</strong>. <strong>Verify</strong>. <strong>Adapt</strong>. Keep humans
+in control of consequential decisions and demonstrate how the solution responds when
+evidence or circumstances change.
+</p>
+</div>
+<!-- Challenge Catalogue Nav Row -->
+<div class="catalogue-nav-row">
+<div class="catalogue-title-area">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: 1.2px; text-transform:
+uppercase; color: var(--tcs-cyan); margin-bottom: 2px;">CHALLENGE
+CATALOGUE</div>
+<h2>Choose the problem worth solving</h2>
+<p>Open any challenge to view its complete engineering brief.</p>
+</div>
+<div class="action-modal-btn-group">
+<button class="btn-action-modal primary" onclick="showModal('modal-tcs-expectations')">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87
+1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+What TCS Expect
+</button>
+<button class="btn-action-modal" onclick="showModal('modal-submission-reqs')">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2
+2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8"
+y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+Submission Requirements
+</button>
+<button class="btn-action-modal" onclick="showModal('modal-not-sufficient')">
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15"
+y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+Evaluation Criteria
+</button>
+</div>
+</div>
+<!-- Filter Tabs -->
+<div class="filter-pills">
+<button class="filter-btn active" onclick="applyThemeFilter('all', this)">All
+Challenges (15)</button>
+<button class="filter-btn" onclick="applyThemeFilter('tech', this)">Theme 1: AI for
+Tech (01 - 05)</button>
+<button class="filter-btn" onclick="applyThemeFilter('business', this)">Theme 2: AI
+for Business (06 - 10)</button>
+<button class="filter-btn" onclick="applyThemeFilter('impact', this)">Theme 3: AI for
+Impact (11 - 15)</button>
+</div>
+<!-- 3 Themes Layout -->
+<div class="themes-container">
+<!-- THEME 1: AI FOR TECH -->
+<div class="theme-col theme-tech" data-theme="tech">
+<span class="theme-badge-label">Tech</span>
+<h3 class="theme-head-title">AI FOR TECH</h3>
+<div class="theme-head-sub">Engineering, Operations &amp; AI Platforms</div>
+<div class="challenge-stack">
+<div class="challenge-entry" onclick="openFullBrief(1)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">IT Operations / AIOps</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">01. Autonomous Incident Investigation &amp;
+Recovery Agent</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Agentic AI</span>
+<span class="challenge-tag">AIOps</span>
+<span class="challenge-tag">Root Cause Analysis</span>
+<span class="challenge-tag">Observability</span>
+</div>
+</div>
+<div class="challenge-entry" onclick="openFullBrief(2)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">Software Engineering</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">02. AI Software Architect: Requirements-to-
+Architecture Agent</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Agentic AI</span>
+<span class="challenge-tag">Architecture</span>
+<span class="challenge-tag">SDLC Reasoning</span>
+</div>
+</div>
+<div class="challenge-entry" onclick="openFullBrief(3)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">Application Modernization</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">03. Autonomous Legacy Modernization
+Agent</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Code Intelligence</span>
+<span class="challenge-tag">Modernization</span>
+<span class="challenge-tag">Software Engineering</span>
+</div>
+</div>
+<div class="challenge-entry" onclick="openFullBrief(4)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">AI Safety &amp; Quality</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">04. Reimagining Quality Engineering for LLM-
+Enabled Systems</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">LLM Evaluation</span>
+<span class="challenge-tag">Responsible AI</span>
+<span class="challenge-tag">Prompt Injection</span>
+</div>
+</div>
+<div class="challenge-entry" onclick="openFullBrief(5)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">AI Economics / FinOps</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">05. Autonomous AI FinOps &amp; Intelligent
+Model Routing</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">FinOps</span>
+<span class="challenge-tag">LLM Routing</span>
+<span class="challenge-tag">Cost Optimization</span>
+</div>
+</div>
+</div>
+</div>
+<!-- THEME 2: AI FOR BUSINESS -->
+<div class="theme-col theme-business" data-theme="business">
+<span class="theme-badge-label">Business</span>
+<h3 class="theme-head-title">AI FOR BUSINESS</h3>
+<div class="theme-head-sub">Customer, Finance, Supply Chain &amp;
+Retail</div>
+<div class="challenge-stack">
+<div class="challenge-entry" onclick="openFullBrief(6)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">Customer Experience</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">06. Autonomous Customer Experience
+Recovery</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Customer AI</span>
+<span class="challenge-tag">NLP Decision</span>
+<span class="challenge-tag">Business AI</span>
+</div>
+</div>
+<div class="challenge-entry" onclick="openFullBrief(7)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">Financial Crime</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">07. AI Financial Crime Network
+Investigator</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Graph AI</span>
+<span class="challenge-tag">Fraud Investigation</span>
+<span class="challenge-tag">Explainable AI</span>
+</div>
+</div>
+<div class="challenge-entry" onclick="openFullBrief(8)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">Insurance</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">08. Multimodal Autonomous Insurance
+Claims Investigator</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Multimodal AI</span>
+<span class="challenge-tag">Vision AI</span>
+<span class="challenge-tag">Document AI</span>
+</div>
+</div>
+<div class="challenge-entry" onclick="openFullBrief(9)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">Supply Chain</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">09. Autonomous Supply Chain Digital Twin
+Recovery Agent</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Digital Twin</span>
+<span class="challenge-tag">Supply Chain</span>
+<span class="challenge-tag">Optimization</span>
+</div>
+</div>
+<div class="challenge-entry" onclick="openFullBrief(10)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">Retail / CPG</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">10. Autonomous Retail Decision
+Intelligence</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Retail AI</span>
+<span class="challenge-tag">Forecasting</span>
+<span class="challenge-tag">Decision Intelligence</span>
+</div>
+</div>
+</div>
+</div>
+<!-- THEME 3: AI FOR IMPACT -->
+<div class="theme-col theme-impact" data-theme="impact">
+<span class="theme-badge-label">Impact</span>
+<h3 class="theme-head-title">AI FOR IMPACT</h3>
+<div class="theme-head-sub">Sustainability, Health &amp; Public Safety</div>
+<div class="challenge-stack">
+<div class="challenge-entry" onclick="openFullBrief(11)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">Disaster Management</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">11. AI Disaster Intelligence &amp;
+Autonomous Relief Coordinator</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Emergency Response</span>
+<span class="challenge-tag">Optimization</span>
+<span class="challenge-tag">Responsible AI</span>
+</div>
+</div>
+<div class="challenge-entry" onclick="openFullBrief(12)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">Sustainability</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">12. AI for Water Resilience &amp; Smart
+Resource Management</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Forecasting</span>
+<span class="challenge-tag">Anomaly Detection</span>
+<span class="challenge-tag">Sustainability</span>
+</div>
+</div>
+<div class="challenge-entry" onclick="openFullBrief(13)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">Climate Resilience</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">13. AI-Powered Urban Climate Digital
+Twin</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Digital Twin</span>
+<span class="challenge-tag">Geospatial AI</span>
+<span class="challenge-tag">Climate AI</span>
+</div>
+</div>
+<div class="challenge-entry" onclick="openFullBrief(14)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">Public Health</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">14. Public Health Early-Warning
+Intelligence</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Anomaly Detection</span>
+<span class="challenge-tag">Decision Support</span>
+<span class="challenge-tag">NIST AI Profile</span>
+</div>
+</div>
+<div class="challenge-entry" onclick="openFullBrief(15)">
+<div class="challenge-entry-top">
+<span class="challenge-domain-tag">Mobility &amp; Safety</span>
+<span class="challenge-arrow">&rarr;</span>
+</div>
+<div class="challenge-entry-title">15. Vision AI for Preventive Road Safety</div>
+<div class="challenge-tags-row">
+<span class="challenge-tag">Vision AI</span>
+<span class="challenge-tag">Safety Analytics</span>
+<span class="challenge-tag">Preventive Action</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Global Footer -->
+<footer>
+<div class="container">
+<p><strong>AI Innovation Hackathon 2026</strong> &bull; Tata Consultancy
+Services (TCS) &amp; Bannari Amman Institute of Technology.</p>
+<p style="margin-top: 6px; font-size: 12px; color: #64748b;">Build AI that can Reason
+&bull; Plan &bull; Act &bull; Verify &bull; Adapt.</p>
+</div>
+</footer>
+<!-- ==================== MODALS: VERBATIM CONTEXT ==================== -->
+<!-- MODAL 1: What TCS Expect (Verbatim) -->
+<div class="modal-backdrop" id="modal-tcs-expectations">
+<div class="modal-card">
+<div class="modal-head">
+<div class="modal-head-row-top">
+<h3 class="modal-challenge-h3">TCS Expectations</h3>
+<button class="modal-dismiss-btn" onclick="hideModal('modal-tcs-expectations')">&times;</button>
+</div>
+<p style="font-size: 12.5px; color: var(--tcs-sky); font-weight: 700; text-transform:
+uppercase; letter-spacing: 0.8px;">Challenge Catalogue &bull; Core Principles</p>
+</div>
+<div class="modal-scroll-area">
+<p>
+This is an <strong>AI engineering hackathon</strong>, not a chatbot-building
+competition. A chatbot, static dashboard, prompt wrapper, API integration or
+conventional ML prediction by itself is not considered a complete solution.
+</p>
+<div class="modal-section-h">Core Capability Criteria</div>
+<p>Teams are expected to demonstrate <strong>at least 5 of these 7
+capabilities</strong>:</p>
+<ul>
+<li><strong>Reason across multiple sources.</strong></li>
+<li><strong>Plan multiple steps toward an objective.</strong></li>
+<li><strong>Act through tools, APIs, functions or simulated enterprise
+systems.</strong></li>
+<li><strong>Verify conclusions against evidence.</strong></li>
+<li><strong>Adapt when circumstances or evidence change.</strong></li>
+<li><strong>Human Control for consequential decisions.</strong></li>
+<li><strong>Evaluate performance using measurable metrics.</strong></li>
+</ul>
+<div class="callout-box callout-warning">
+<strong>Dynamic Jury Scenario:</strong> Every challenge also includes an
+<strong>unseen jury scenario</strong> during final evaluation.
+</div>
+<p>A solution consisting primarily of any of the following will not automatically
+qualify as a complete AI solution:</p>
+<div class="callout-box callout-danger">
+<ul style="margin-left: 18px; display: flex; flex-direction: column; gap: 8px;">
+<li><strong>Chatbot UI</strong></li>
+<li><strong>Prompt + LLM response</strong></li>
+<li><strong>Static dashboard</strong></li>
+<li><strong>Power BI/dashboard visualization only</strong></li>
+<li><strong>Basic RAG Q&amp;A</strong></li>
+<li><strong>Single API call</strong></li>
+<li><strong>Prepared demonstration with hardcoded results</strong></li>
+</ul>
+</div>
+</div>
+<div class="modal-foot">
+<button class="btn-action-modal primary" onclick="hideModal('modal-tcs-expectations')">Close</button>
+</div>
+</div>
+</div>
+<!-- MODAL 2: Submission Requirements (Verbatim) -->
+<div class="modal-backdrop" id="modal-submission-reqs">
+<div class="modal-card">
+<div class="modal-head">
+<div class="modal-head-row-top">
+<h3 class="modal-challenge-h3">Submission Requirements</h3>
+<button class="modal-dismiss-btn" onclick="hideModal('modal-submission-reqs')">&times;</button>
+</div>
+<p style="font-size: 12.5px; color: var(--tcs-sky); font-weight: 700; text-transform:
+uppercase; letter-spacing: 0.8px;">Standard 8-Pillar Evaluation Criteria</p>
+</div>
+<div class="modal-scroll-area">
+<div class="modal-section">
+<strong>1. Problem Understanding Presentation</strong>
+<p>Explain the real problem and stakeholders. Have less no of slide (max 5 slides)
+to articluate your AI work but mandatory to coverer Architecture ,Working Prototype
+,Dynamic Adaptation</p>
+</div>
+<div class="modal-section">
+<strong>2. AI Architecture</strong>
+<p>Show: <code>Input &rarr; AI/Agents &rarr; Tools &rarr; Data/Knowledge &rarr;
+Decisions &rarr; Human Control &rarr; Output</code></p>
+</div>
+<div class="modal-section">
+<strong>3. Working Prototype</strong>
+<p>A functional implementation is required.</p>
+</div>
+<div class="modal-section">
+<strong>4. AI Reasoning</strong>
+<p>Demonstrate why AI made its recommendation.</p>
+</div>
+<div class="modal-section">
+<strong>5. Evidence &amp; Traceability</strong>
+<p>Show which evidence influenced important conclusions.</p>
+</div>
+<div class="modal-section">
+<strong>6. Evaluation</strong>
+<p>Define measurable metrics. Examples:</p>
+<ul>
+<li>accuracy</li>
+<li>groundedness</li>
+<li>latency</li>
+<li>cost</li>
+<li>false-positive rate</li>
+<li>task-success rate</li>
+<li>recovery time</li>
+<li>business KPI.</li>
+</ul>
+</div>
+<div class="modal-section">
+<strong>7. Responsible AI</strong>
+<p>Explain:</p>
+<ul>
+<li>privacy</li>
+<li>security</li>
+<li>hallucination control</li>
+<li>human approval</li>
+<li>failure handling</li>
+<li>bias/fairness where applicable.</li>
+</ul>
+</div>
+<div class="modal-section">
+<strong>8. Dynamic Adaptation</strong>
+<p>Demonstrate how the solution handles the jury's surprise scenario.</p>
+</div>
+</div>
+<div class="modal-foot">
+<button class="btn-action-modal primary" onclick="hideModal('modal-submission-reqs')">Close</button>
+</div>
+</div>
+</div>
+<!-- MODAL 3: Evaluation Criteria (Verbatim) -->
+<div class="modal-backdrop" id="modal-not-sufficient">
+<div class="modal-card">
+<div class="modal-head">
+<div class="modal-head-row-top">
+<h3 class="modal-challenge-h3">Evaluation Criteria</h3>
+<button
+class="modal-dismiss-btn"
+onclick="hideModal('modal-not-sufficient')">
+&times;
+</button>
+</div>
+<p style="
+font-size: 12.5px;
+color: var(--tcs-sky);
+font-weight: 700;
+letter-spacing: 0.8px;">
+Mentor Evaluation &amp; Jury Evaluation
+</p>
+</div>
+<!-- ============================= -->
+<!-- MODAL CONTENT STARTS HERE -->
+<!-- ============================= -->
+<div class="modal-scroll-area">
+<!-- STAGE 1 -->
+<div class="evaluation-stage">
+<h4 class="evaluation-title">
+Stage 1: Mentor Technical Evaluation
+</h4>
+<p class="evaluation-desc">
+Teams will first undergo a technical evaluation by mentors.
+The maximum score is <strong>50 marks</strong>.
+</p>
+<table class="evaluation-table">
+<thead>
+<tr>
+<th>Category</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Problem and Challenge Understanding</td>
+<td>10</td>
+</tr>
+<tr>
+<td>AI Reasoning and Solution Architecture</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Technical Implementation and Prototype</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Evidence, Evaluation and Responsible AI</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Adaptability, Innovation and Impact</td>
+<td>10</td>
+</tr>
+<tr class="evaluation-total">
+<td><strong>Total</strong></td>
+<td><strong>50</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- STAGE 2 -->
+<div class="evaluation-stage">
+<h4 class="evaluation-title">
+Stage 2: Jury Presentation Scoring
+</h4>
+<p class="evaluation-desc">
+<strong>10 shortlisted teams</strong> will present to
+<strong>5 jury members</strong>. Each jury member will
+independently evaluate each team for a maximum of
+<strong>100 marks</strong>.
+</p>
+<table class="evaluation-table">
+<thead>
+<tr>
+<th>Category</th>
+<th>Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solution Articulation and Presentation</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Problem Statement Understanding</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Solution Hypothesis</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Technical Excellence and Working Prototype</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Business Impact Assessment</td>
+<td>20</td>
+</tr>
+<tr class="evaluation-total">
+<td><strong>Total per Jury Member</strong></td>
+<td><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- =========================== -->
+<!-- MODAL CONTENT ENDS HERE -->
+<!-- =========================== -->
+<div class="modal-foot">
+<button
+class="btn-action-modal primary"
+onclick="hideModal('modal-not-sufficient')">
+Understood
+</button>
+</div>
+</div>
+</div>
+<!-- MODAL 4: Dynamic Challenge Full Brief Viewer with Aligned Header Layout -->
+<div class="modal-backdrop" id="modal-challenge-viewer">
+<div class="modal-card">
+<!-- Challenge Modal Header with Aligned Theme / Domain / Tags -->
+<div class="modal-head">
+<div class="modal-head-row-top">
+<h3 class="modal-challenge-h3" id="cb-title">### Challenge 01 Autonomous
+Incident Investigation &amp; Recovery Agent</h3>
+<button class="modal-dismiss-btn" onclick="hideModal('modal-challenge-viewer')">&times;</button>
+</div>
+<!-- Structured Aligned Header Meta Block -->
+<div class="challenge-meta-grid">
+<div class="meta-line">
+<span class="meta-label-tag">Theme</span>
+<span class="meta-value-text" id="cb-theme-display">THEME 1: AI for
+Tech</span>
+</div>
+<div class="meta-line">
+<span class="meta-label-tag">Domain</span>
+<span class="meta-value-text" id="cb-domain-display">AIOps / SRE /
+Autonomous IT</span>
+</div>
+<div class="meta-line">
+<span class="meta-label-tag">Tags</span>
+<div class="meta-tags-flex" id="cb-tags-display">
+<!-- Dynamically populated chips -->
+</div>
+</div>
+</div>
+</div>
+<div class="modal-scroll-area" id="cb-content">
+<!-- Dynamically populated with verbatim content from document -->
+</div>
+<div class="modal-foot">
+<button class="btn-action-modal primary" onclick="hideModal('modal-challenge-viewer')">Close Engineering Brief</button>
+</div>
+</div>
+</div>
+<script>
+// Complete Verbatim Data for all 15 Challenges
+const verbatimChallenges = {
+1: {
+title: "Challenge 01 Autonomous Incident Investigation & Recovery Agent",
+domain: "AIOps / SRE / Autonomous IT",
+tags: ["Agentic AI", "AIOps", "Root Cause Analysis", "Observability", "Human-in-the- Loop"],
+theme: "THEME 1: AI for Tech",
+themeObj: "Build intelligent AI systems capable of understanding, engineering, operating, securing and optimizing complex technology environments.",
+sections: [
+{ heading: "Context & Background", content: "Production systems are increasingly distributed across applications, microservices, APIs, databases, cloud infrastructure and third-party services. A single production incident may therefore generate thousands of signals across logs, metrics, traces, alerts, deployment history and configuration changes. Operations teams do not just need another alert. They need assistance answering: What actually happened, why did it happen, what is impacted, and what should we do next?" },
+{ heading: "Your Challenge", content: "Build an AI-powered autonomous incident investigation and recovery system that can investigate a complex production incident across multiple evidence sources. Your solution must generate multiple root-cause hypotheses, evaluate the available evidence and recommend recovery actions. The AI must not immediately jump to one conclusion." },
+{ heading: "Think End-to-End", isList: true, content: ["application logs",
+"infrastructure logs", "CPU/memory metrics", "distributed traces", "alerts", "deployment history", "configuration changes", "service dependencies", "previous incidents", "support tickets"] },
+{ heading: "What Your AI Must Demonstrate", isList: true, content: ["incident timeline reconstruction", "service/dependency understanding", "abnormal event detection", "multiple root-cause hypotheses", "supporting and contradicting evidence",
+"investigation planning", "tool/API invocation", "hypothesis confidence", "impact assessment", "remediation recommendation", "human approval", "replanning"] },
+{ heading: "Expected Outcome", content: "A working system that produces: Evidence → Timeline → Hypotheses → Investigation → Root Cause → Recovery Plan → Verification. The evidence used by the AI must be traceable." },
+{ heading: "Guardrails", content: "The prototype must not execute destructive remediation automatically. Production-impacting actions should require explicit human approval." },
+{ heading: "Success Measures", isList: true, content: ["root-cause accuracy",
+"evidence coverage", "investigation time", "false conclusions", "recovery time",
+"traceability", "adaptation to new evidence"] }
+]
+},
+2: {
+title: "Challenge 02 AI Software Architect: Requirements-to-Architecture Agent",
+domain: "Software Engineering",
+tags: ["Agentic AI", "Architecture Requirements", "Engineering SDLC Reasoning"],
+theme: "THEME 1: AI for Tech",
+themeObj: "Build intelligent AI systems capable of understanding, engineering, operating, securing and optimizing complex technology environments.",
+sections: [
+{ heading: "Context & Background", content: "Software requirements rarely arrive as one perfect document. Critical information may be distributed across: meeting transcripts, emails, user stories, requirement documents, compliance policies, change requests, and architectural constraints. Different stakeholders may even contradict each other." },
+{ heading: "Your Challenge", content: "Build an AI software architecture system that converts fragmented and potentially conflicting evidence into a traceable software architecture. The system should not blindly convert requirements into diagrams. It should identify: ambiguity, missing information, contradictions, assumptions, and architectural constraints." },
+{ heading: "Think End-to-End", content: "Your AI should reason through: Evidence → Requirements → Clarification → Architecture Decisions → Architecture → Validation." },
+{ heading: "What Your AI Must Demonstrate", isList: true, content: ["requirement extraction", "requirements classification", "ambiguity identification", "conflicting requirements", "clarification questions", "functional/NFR separation", "constraint identification", "architecture recommendations", "component/service decomposition",
+"data-flow reasoning", "security considerations", "Architecture Decision Records",
+"requirement-to-component traceability"] },
+{ heading: "Expected Outcome", isList: true, content: ["consolidated requirements catalogue", "unresolved questions", "architecture diagram", "component/service design", "API/data-flow recommendations", "ADRs", "requirement traceability",
+"architecture risk assessment"] },
+{ heading: "Guardrails", content: "AI-generated architecture must be presented as an engineering recommendation, not an unquestionable decision. Unsupported architectural assumptions must be clearly identified." },
+{ heading: "Success Measures", isList: true, content: ["requirement coverage",
+"traceability", "contradiction detection", "architecture consistency", "NFR coverage",
+"adaptability", "quality of technical justification"] }
+]
+},
+3: {
+title: "Challenge 03 Autonomous Legacy Modernization Agent",
+domain: "Application Modernization",
+tags: ["Code Intelligence", "Agentic AI", "Modernization Architecture", "Software Engineering"],
+theme: "THEME 1: AI for Tech",
+themeObj: "Build intelligent AI systems capable of understanding, engineering, operating, securing and optimizing complex technology environments.",
+sections: [
+{ heading: "Context & Background", content: "Organizations continue to run important applications built many years ago. The biggest modernization challenge is often not rewriting the code. It is understanding: What does this system actually do? Documentation may be incomplete, developers may have moved on and critical business rules may exist only inside code." },
+{ heading: "Your Challenge", content: "Build an AI modernization system that examines a legacy application and prepares an evidence-based modernization strategy." },
+{ heading: "Input Evidence", isList: true, content: ["legacy source code", "database schema", "configuration", "interface definitions", "existing documentation", "production incidents", "change tickets"] },
+{ heading: "What Your AI Must Demonstrate", isList: true, content: ["application understanding", "business-rule extraction", "dependency discovery", "database dependency analysis", "obsolete-code identification", "undocumented-behaviour detection", "technical-debt analysis", "modernization risk analysis", "modernization alternatives", "migration planning"] },
+{ heading: "Critical Requirement", content: "Your AI must distinguish between: Code that appears obsolete and Code implementing an undocumented but critical business rule. Simply identifying old technology is insufficient." },
+{ heading: "Expected Outcome", isList: true, content: ["current-state understanding", "business-rule catalogue", "dependency map", "modernization heat map", "technical-debt assessment", "target architecture", "migration options", "phased modernization roadmap", "regression/testing strategy"] },
+{ heading: "Guardrails", content: "The AI must not recommend deleting or rewriting components merely because they use old technology. Business behaviour and dependencies must be considered." },
+{ heading: "Success Measures", isList: true, content: ["business-rule extraction",
+"dependency accuracy", "modernization feasibility", "risk identification", "architecture quality", "regression coverage"] }
+]
+},
+4: {
+title: "Challenge 04: Reimagining Quality Engineering for LLM-Enabled Systems",
+domain: "AI Safety & Quality Engineering",
+tags: ["LLM Evaluation", "Quality Engineering", "Responsible AI", "Grounding",
+"Prompt Injection"],
+theme: "THEME 1: AI for Tech",
+themeObj: "Build intelligent AI systems capable of understanding, engineering, operating, securing and optimizing complex technology environments.",
+sections: [
+{ heading: "Context & Background", content: "Traditional testing cannot fully address LLM risks such as hallucination, variability, prompt injection, grounding failures, bias and model drift. A few successful prompts are not enough to establish release confidence." },
+{ heading: "Your Challenge", content: "Build a reusable AI quality framework that evaluates LLM-enabled systems for accuracy, grounding, completeness, safety, consistency, security and release readiness. The framework should detect failures and recommend Release, Conditional Release or Reject with supporting evidence." },
+{ heading: "Think End-to-End", content: "Define Risks → Generate Tests → Execute → Capture Responses → Verify Grounding → Classify Failures → Score Quality → Recommend Release → Human Review → Monitor → Regress" },
+{ heading: "What Your AI Must Demonstrate", isList: true, content: ["Dynamically generate tests from risk scenarios", "Test an LLM-enabled application", "Detect hallucinations and unsupported claims", "Verify grounding and citations", "Run prompt- injection and adversarial tests", "Produce quality and safety scores", "Explain the release recommendation", "Convert failures into regression tests"] },
+{ heading: "Important Requirement", content: "A manually prepared collection of prompts is not sufficient. The solution should dynamically generate or vary test scenarios based on risks, context and previous failures." },
+{ heading: "Expected Outcome", isList: true, content: ["Reusable evaluation dataset and test suite", "Quality and safety scorecard", "Failure taxonomy with evidence",
+"Release recommendation", "Regression suite", "Continuous-monitoring plan"] },
+{ heading: "Guardrails", isList: true, content: ["Test only against sandbox/demo or authorized applications", "Do not attack real external systems", "Use synthetic or anonymized sensitive data", "Maintain test evidence and audit logs", "Require human review for critical release decisions"] },
+{ heading: "Success Measures", isList: true, content: ["Failure and hallucination detection accuracy", "Grounding verification accuracy", "Prompt-injection detection",
+"Low false-positive rate", "Test and risk coverage", "Regression coverage", "Consistency and explainability", "Quality of release recommendations", "Ability to adapt to new jury- provided scenarios"] }
+]
+},
+5: {
+title: "Challenge 05 Autonomous AI FinOps & Intelligent Model Routing",
+domain: "AI Economics / FinOps",
+tags: ["FinOps", "LLM Routing", "Cost Optimization", "AI Evaluation", "Agentic AI"],
+theme: "THEME 1: AI for Tech",
+themeObj: "Build intelligent AI systems capable of understanding, engineering, operating, securing and optimizing complex technology environments.",
+sections: [
+{ heading: "Context & Background", content: "The most powerful AI model is not necessarily the correct model for every request. Organizations must balance: Quality + Cost + Latency + Privacy + Reliability. Current FinOps practice is increasingly addressing AI spending and agentic approaches to optimization. AI for FinOps: Agentic Use Cases in FinOps reports that AI spend is now being managed by the large majority of FinOps practices surveyed and discusses emerging FinOps agents." },
+{ heading: "Your Challenge", content: "Build an intelligent AI gateway that determines which model or strategy should handle each request." },
+{ heading: "The AI Could Consider", isList: true, content: ["request complexity",
+"estimated tokens", "expected response quality", "latency", "model price", "data sensitivity", "business criticality", "historical performance."] },
+{ heading: "What Your AI Must Demonstrate", isList: true, content: ["request classification", "dynamic model routing", "token accounting", "cost attribution",
+"semantic/prompt caching", "context optimization", "budget controls", "provider/model fallback", "quality measurement", "cost-quality trade-offs"] },
+{ heading: "Example", content: "Instead of: Every request → Most powerful model<br>Demonstrate: Simple Task → Smaller Model; Complex Reasoning → Advanced Model; Sensitive Task → Approved Private Model" },
+{ heading: "Expected Outcome", content: "Demonstrate measurable improvements in: cost, latency, quality, reliability." },
+{ heading: "Critical KPI", content: "Teams should calculate: Cost per successful AI outcome rather than merely “tokens saved.”" },
+{ heading: "Guardrails", content: "Cost saving must not silently reduce quality below an accepted threshold." },
+{ heading: "Success Measures", isList: true, content: ["cost reduction", "quality retention", "routing accuracy", "latency", "resilience", "transparency"] }
+]
+},
+6: {
+title: "Challenge 06 Autonomous Customer Experience Recovery",
+domain: "Customer Experience",
+tags: ["Customer AI", "Agentic AI", "NLP Decision", "Business AI"],
+theme: "THEME 2: AI for Business",
+themeObj: "Build AI systems that reason across enterprise information and coordinate measurable business decisions.",
+sections: [
+{ heading: "Context & Background", content: "Customer evidence exists across surveys, product reviews, complaints, contact-center transcripts, usage data, service tickets and operational metrics. Sentiment analysis may describe dissatisfaction, but it does not determine what the business should change first." },
+{ heading: "Challenge", content: "Build an AI system that detects an emerging customer-experience problem, identifies probable root causes, determines impacted customer segments and recommends coordinated intervention." },
+{ heading: "Evidence May Include", isList: true, content: ["reviews", "support tickets", "social feedback", "transaction information", "telemetry", "product usage",
+"releases", "customer segments."] },
+{ heading: "What Your AI Must Demonstrate", isList: true, content: ["Signal → Issue → Segment → Root Cause → Impact → Intervention", "combine multiple feedback channels", "cluster emerging issues", "estimate severity", "identify impacted segments",
+"correlate operational/product changes", "evaluate alternative explanations",
+"recommend interventions", "define outcome KPIs."] },
+{ heading: "Expected Outcome", isList: true, content: ["CX issue graph", "affected segment", "root-cause hypothesis", "evidence", "impact estimate", "prioritized interventions", "KPI monitoring plan"] },
+{ heading: "Guardrails", content: "Customer sentiment alone must not be treated as proof of root cause." },
+{ heading: "Success Measures", isList: true, content: ["issue detection",
+"segmentation", "evidence quality", "impact estimation", "intervention relevance", "KPI quality"] }
+]
+},
+7: {
+title: "Challenge 07 AI Financial Crime Network Investigator",
+domain: "Financial Crime",
+tags: ["Graph AI", "Fraud Investigation", "Explainable AI", "Agentic AI"],
+theme: "THEME 2: AI for Business",
+themeObj: "Build AI systems that reason across enterprise information and coordinate measurable business decisions.",
+sections: [
+{ heading: "Context & Background", content: "Financial-crime signals are distributed across transactions, accounts, related businesses, devices, beneficiaries, merchants, complaints, sanctions information, alerts and previous investigations. Hidden relationships may be difficult to detect when each signal is reviewed independently." },
+{ heading: "Your Challenge", content: "Build an AI investigator capable of discovering and reasoning about suspicious relationships across: customers, bank accounts, merchants, devices, IP addresses, beneficiaries, locations, transactions." },
+{ heading: "What Your AI Must Demonstrate", isList: true, content: ["entity resolution", "relationship graph construction", "anomaly identification", "transaction- pattern reasoning", "hypothesis generation", "evidence gathering", "alternative explanations", "confidence scoring", "investigation narrative."] },
+{ heading: "Key Requirement", content: "This is not simply a fraud classifier. Your AI should answer: Why is this network suspicious? What evidence supports that conclusion? What legitimate explanation might exist? What should an investigator examine next?" },
+{ heading: "Expected Outcome", content: "Network → Pattern → Hypothesis → Evidence → Alternatives → Risk → Human Investigation" },
+{ heading: "Guardrails", content: "The system must not make autonomous legal or punitive decisions. High-risk conclusions should require human investigation." },
+{ heading: "Success Measures", isList: true, content: ["network discovery",
+"evidence traceability", "false-positive control", "alternative-hypothesis reasoning",
+"explainability"] }
+]
+},
+8: {
+title: "Challenge 08 Multimodal Autonomous Insurance Claims Investigator",
+domain: "Insurance",
+tags: ["Multimodal AI", "Vision AI", "Document AI", "AI Reasoning"],
+theme: "THEME 2: AI for Business",
+themeObj: "Build AI systems that reason across enterprise information and coordinate measurable business decisions.",
+sections: [
+{ heading: "Context & Background", content: "Insurance claims involve policy contracts, claimant statements, incident reports, images or metadata, repair estimates, telematics, weather information, historical claims and third-party assessments. Fragmented evidence can delay fair and consistent resolution." },
+{ heading: "Challenge", content: "Build an AI claims investigator capable of reasoning across different forms of evidence." },
+{ heading: "Evidence Could Include", isList: true, content: ["accident photographs",
+"claim descriptions", "policy documents", "repair estimates", "historical claims",
+"metadata", "weather information."] },
+{ heading: "Example", content: "The image may indicate front-end damage while the narrative describes the vehicle being struck from behind. The correct response is not automatically “fraud.” Instead, AI should identify: inconsistency → possible explanations → missing evidence → investigation recommendation." },
+{ heading: "What Your AI Must Demonstrate", isList: true, content: ["document understanding", "image reasoning", "policy interpretation", "evidence consistency",
+"incident reconstruction", "anomaly detection", "missing-evidence identification",
+"alternative explanations", "settlement recommendation."] },
+{ heading: "Guardrails", content: "AI should support, not autonomously make, high- impact insurance decisions." },
+{ heading: "Success Measures", isList: true, content: ["multimodal reasoning quality", "policy interpretation", "evidence traceability", "consistency detection", "fair handling of uncertainty"] }
+]
+},
+9: {
+title: "Challenge 09 Autonomous Supply Chain Digital Twin Recovery Agent",
+domain: "Supply Chain",
+tags: ["Digital Twin", "Supply Chain", "Optimization", "Agentic AI"],
+theme: "THEME 2: AI for Business",
+themeObj: "Build AI systems that reason across enterprise information and coordinate measurable business decisions.",
+sections: [
+{ heading: "Context & Background", content: "A supply disruption may affect purchase orders, inventory, production schedules, transport, contractual commitments and customer priorities. A local response can shift the disruption elsewhere if the full dependency chain is not understood." },
+{ heading: "Challenge", content: "Create a simplified AI-powered digital twin of a supply network that can respond to disruption.<br><strong>Possible Network:</strong> Supplier → Material → Factory → Distribution Centre → Store → Customer" },
+{ heading: "Scenario", content: "A critical supplier becomes unavailable. Your AI must determine: affected materials, factories, inventory, orders, customers, and SLA impact." },
+{ heading: "Potential Recovery Actions", isList: true, content: ["alternative supplier",
+"inventory reallocation", "production rescheduling", "substitute material", "customer prioritization", "transportation rerouting."] },
+{ heading: "Compare Plans Using", isList: true, content: ["cost", "SLA", "recovery time", "customer impact", "operational risk", "sustainability implications."] },
+{ heading: "Expected Outcome", content: "Generate multiple recovery scenarios rather than one answer." },
+{ heading: "Guardrails", content: "AI should clearly differentiate assumptions from known data." },
+{ heading: "Success Measures", isList: true, content: ["disruption detection",
+"dependency reasoning", "recovery-plan diversity", "optimization quality", "adaptability",
+"business impact"] }
+]
+},
+10: {
+title: "Challenge 10 Autonomous Retail Decision Intelligence",
+domain: "Retail / CPG",
+tags: ["Retail AI", "Forecasting", "Decision Intelligence", "Agentic AI"],
+theme: "THEME 2: AI for Business",
+themeObj: "Build AI systems that reason across enterprise information and coordinate measurable business decisions.",
+sections: [
+{ heading: "Context & Background", content: "Retailers make connected decisions involving demand, inventory, promotions, supplier lead times and store requirements. Retail decisions rarely exist independently. A promotion can affect: Demand → Inventory → Replenishment → Logistics → Margin → Customer Experience. The solution should go beyond forecasting and recommend a specific business action." },
+{ heading: "Your Challenge", content: "Build an AI decision-intelligence system that determines what action each store or channel should take next, and why." },
+{ heading: "Available Signals May Include", isList: true, content: ["SKU sales",
+"inventory", "promotions", "price", "supplier lead time", "store location", "events",
+"weather", "competitor pricing."] },
+{ heading: "AI Could Recommend", isList: true, content: ["replenish", "transfer inventory", "increase allocation", "markdown", "adjust promotion", "substitute product",
+"take no action."] },
+{ heading: "Critical Requirement", content: "Don't simply provide sales forecasts. The system must turn intelligence into decisions." },
+{ heading: "Expected Flow", content: "Observe → Predict → Reason → Decide → Act → Measure" },
+{ heading: "Expected Outcome", isList: true, content: ["demand intelligence", "risk identification", "store/SKU recommendations", "action rationale", "expected impact",
+"KPI tracking."] },
+{ heading: "Success Measures", content: "Compare your AI against a simple baseline using measures such as: stockouts, excess inventory, service level, revenue/margin, decision accuracy." }
+]
+},
+11: {
+title: "Challenge 11 AI Disaster Intelligence & Autonomous Relief Coordinator",
+domain: "Disaster Management",
+tags: ["Agentic AI", "Optimization", "Emergency Response", "Responsible AI"],
+theme: "THEME 3: AI for Impact",
+themeObj: "Apply advanced AI to strengthen resilience, sustainability and public well-being while maintaining responsible human oversight.",
+sections: [
+{ heading: "Context & Background", content: "During a local emergency, information may arrive through citizen reports, helplines, weather alerts, field-team updates, shelter records, road status and resource inventories. Duplicate, delayed or conflicting reports can distort priorities." },
+{ heading: "Challenge", content: "Build an AI-powered disaster intelligence system that helps coordinate resources during a rapidly changing emergency." },
+{ heading: "Evidence May Include", isList: true, content: ["weather alerts", "citizen reports", "field reports", "shelter availability", "transport routes", "road status", "hospital capacity", "emergency resources."] },
+{ heading: "The System Should", content: "Verify → Prioritize → Allocate → Route → Monitor → Replan" },
+{ heading: "Key Difficulty", isList: true, content: ["Not all information has equal reliability. Your solution should differentiate:", "verified government/field information",
+"sensor information", "public reports", "uncertain/unverified reports. "] },
+{ heading: "Expected Outcome", isList: true, content: ["incident map", "evidence reliability", "affected-area prioritization", "resource allocation", "shelter recommendation", "routing", "explainable priority decisions."] },
+{ heading: "Dynamic Jury Challenge", content: "After resources are allocated: A critical road becomes inaccessible. The AI must identify affected assignments and replan." },
+{ heading: "Guardrails", content: "Life-critical emergency decisions must remain under human authority." },
+{ heading: "Success Measures", isList: true, content: ["response time", "allocation efficiency", "information reliability handling", "route adaptation", "explainability",
+"fairness"] }
+]
+},
+12: {
+title: "Challenge 12 AI for Water Resilience & Smart Resource Management",
+domain: "Sustainability",
+tags: ["Sustainability", "Forecasting", "Anomaly Detection", "Optimization"],
+theme: "THEME 3: AI for Impact",
+themeObj: "Apply advanced AI to strengthen resilience, sustainability and public well-being while maintaining responsible human oversight.",
+sections: [
+{ heading: "Context & Background", content: "Water availability depends on supply, rainfall, consumption and infrastructure conditions. Abnormal usage could indicate a leak, unusual demand or a recording problem." },
+{ heading: "Challenge", content: "Build an AI system capable of improving water resilience for a city, community, industrial campus or educational campus." },
+{ heading: "Data May Include", isList: true, content: ["reservoir level", "rainfall",
+"consumption", "building usage", "pipe sensors", "historical leakage", "weather forecast",
+"complaints."] },
+{ heading: "Your AI Should", isList: true, content: ["detect abnormal consumption",
+"identify possible leaks", "forecast shortage", "predict demand", "prioritize repairs",
+"optimize distribution", "recommend conservation actions", "estimate intervention impact."] },
+{ heading: "Important Requirement", content: "Do not build only: “water consumption dashboard.” AI should recommend what should be done next, where, and why." },
+{ heading: "Expected Outcome", content: "Monitor → Detect → Predict → Prioritize → Optimize → Intervene → Measure" },
+{ heading: "Guardrails", content: "Critical supply restrictions should not be imposed autonomously on vulnerable populations." },
+{ heading: "Success Measures", isList: true, content: ["leakage detection",
+"forecasting accuracy", "resource optimization", "conservation impact", "fairness",
+"adaptability"] }
+]
+},
+13: {
+title: "Challenge 13 AI-Powered Urban Climate Digital Twin",
+domain: "Climate Resilience",
+tags: ["Digital Twin", "Geospatial AI", "Climate AI", "Optimization"],
+theme: "THEME 3: AI for Impact",
+themeObj: "Apply advanced AI to strengthen resilience, sustainability and public well-being while maintaining responsible human oversight.",
+sections: [
+{ heading: "Context & Background", content: "Urban thermal environments are highly fragmented; microclimates and surface temperatures vary drastically across a city due to building density, surface materials, and localized green cover (the Urban Heat Island effect). Crucially, the absolute hottest physical location does not always correlate with the highest human risk. To build true climate resilience, decision-makers must look beyond simple temperature readings and analyze the intersection of localized heat with population vulnerability and socio-economic exposure." },
+{ heading: "Challenge", content: "Build a simplified AI-enabled urban climate digital twin capable of identifying areas vulnerable to extreme heat and evaluating possible interventions." },
+{ heading: "Evidence Might Include", isList: true, content: ["surface temperature",
+"greenery", "building density", "land usage", "population exposure", "power demand",
+"water availability", "healthcare capacity."] },
+{ heading: "Two Time Horizons", isList: true, content: ["Immediate response (Examples: cooling centres, alerts, resource allocation)", "Long-term mitigation (Examples: tree cover, shade structures, cool roofs, urban design changes)"] },
+{ heading: "Critical Requirement", content: "Don't merely identify hotspots. Your system must estimate: What happens if we intervene?" },
+{ heading: "Expected Outcome", isList: true, content: ["vulnerability map", "affected population", "causal/risk-factor analysis", "intervention options", "expected impact",
+"prioritization", "uncertainty."] },
+{ heading: "Guardrails", content: "Population vulnerability indicators must not be used to discriminate against communities." },
+{ heading: "Success Measures", isList: true, content: ["hotspot identification",
+"intervention impact", "prioritization", "optimization", "explainability", "equity"] }
+]
+},
+14: {
+title: "Challenge 14 Public Health Early-Warning Intelligence",
+domain: "Public Health",
+tags: ["Responsible AI", "Anomaly Detection", "Forecasting", "Decision Support"],
+theme: "THEME 3: AI for Impact",
+themeObj: "Apply advanced AI to strengthen resilience, sustainability and public well-being while maintaining responsible human oversight.",
+sections: [
+{ heading: "Context & Background", content: "Early outbreak indicators may appear across aggregated hospital admissions, clinic consultations, laboratory counts, pharmacy demand, absenteeism, environmental conditions, and mobility summaries. While these signals enable early detection, unusual spikes can also stem from non- epidemic factors, such as seasonal demand, reporting changes, or holiday schedules."
+},
+{ heading: "Challenge", content: "Build an AI system that identifies population-level emerging health signals without attempting individual diagnosis." },
+{ heading: "Aggregate Evidence May Include", isList: true, content: ["clinic visit counts", "laboratory statistics", "pharmacy demand", "absence trends", "environmental signals", "aggregate mobility", "healthcare capacity."] },
+{ heading: "The AI Must", isList: true, content: ["detect unusual patterns", "correlate signals across sources", "generate hypotheses", "evaluate alternative explanations",
+"estimate confidence", "forecast capacity impact", "recommend investigation/intervention options."] },
+{ heading: "Critical Requirement", content: "The system must distinguish: Correlation from evidence strong enough to justify intervention." },
+{ heading: "Guardrails", isList: true, content: ["The solution must not perform: individual diagnosis, personalized disease prediction, exposure of identifiable health information, or autonomous medical intervention.", "Risk management and human oversight should be explicit, consistent with the trustworthiness principles addressed by the NIST Generative AI Profile. [nist.gov]"] },
+{ heading: "Success Measures", isList: true, content: ["early detection", "false alarms", "evidence quality", "uncertainty handling", "privacy", "capacity forecasting",
+"explainability"] }
+]
+},
+15: {
+title: "Challenge 15 Vision AI for Preventive Road Safety",
+domain: "Mobility & Safety",
+tags: ["Vision AI", "Multimodal AI", "Geospatial AI", "Safety Analytics"],
+theme: "THEME 3: AI for Impact",
+themeObj: "Apply advanced AI to strengthen resilience, sustainability and public well-being while maintaining responsible human oversight.",
+sections: [
+{ heading: "Context & Background", content: "Traditional road safety methodologies are fundamentally reactive, relying heavily on historical crash data—analyzing incidents only after injury or loss of life has occurred. This 'black spot' approach misses a vast spectrum of near-misses and latent systemic hazards. By leveraging continuous, high- resolution Vision AI and multimodal geospatial analytics, urban planners can transition from a reactive model to a proactive, preventive paradigm. This shift allows cities to detect conflict patterns, behavioral risks, and environmental hazards in real-time, intervening to save lives before an accident ever happens.<br><strong>Reactive → Preventive?</strong>" },
+{ heading: "Your Challenge", content: "Build an AI-powered system that identifies dangerous road conditions or behaviours and recommends interventions before serious incidents occur." },
+{ heading: "Evidence Could Include", isList: true, content: ["road photographs",
+"video", "accident history", "road geometry", "traffic", "weather", "visibility", "nearby schools/hospitals", "pedestrian movement."] },
+{ heading: "The AI Could Identify", isList: true, content: ["dangerous intersections",
+"poor visibility", "pedestrian conflicts", "road-surface hazards", "risky traffic patterns",
+"speed-related patterns."] },
+{ heading: "What Your AI Must Demonstrate", content: "Observe → Detect Risk → Explain Factors → Recommend Intervention → Estimate Impact" },
+{ heading: "Intervention Examples", isList: true, content: ["pedestrian crossing",
+"signage", "speed calming", "signal timing", "lighting", "lane modification", "road maintenance."] },
+{ heading: "Important Requirement", content: "The strongest solution should go beyond: “This road is dangerous.” It should answer: Why is it dangerous? What intervention should be implemented? How do we know whether that intervention worked?" },
+{ heading: "Dynamic Jury Challenge", content: "The jury changes a condition such as: weather, traffic volume, road closure, school-hour traffic, construction. The AI must reassess safety risk." },
+{ heading: "Expected Outcome", isList: true, content: ["hazard detection", "risk hotspot", "contributing factors", "intervention recommendation", "before/after impact assessment", "explainability."] },
+{ heading: "Guardrails", content: "Computer vision detections should not be used for identity surveillance. Focus on road conditions, movement patterns and safety risks, not individuals." },
+{ heading: "Success Measures", isList: true, content: ["hazard-detection accuracy",
+"false alarms", "hotspot identification", "intervention effectiveness", "explainability",
+"adaptability"] }
+]
+}
+};
+// Modal Control Functions
+function showModal(id) {
+document.getElementById(id).classList.add('is-active');
+document.body.style.overflow = 'hidden';
+}
+function hideModal(id) {
+document.getElementById(id).classList.remove('is-active');
+document.body.style.overflow = 'auto';
+}
+// Open Challenge Brief with Structured Header (Theme / Domain / Tags)
+function escapeHtml(value) {
+return String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+function openFullBrief(id) {
+const data = verbatimChallenges[id];
+if (!data) return;
+document.getElementById('cb-title').textContent = data.title;
+document.getElementById('cb-theme-display').textContent = data.theme;
+document.getElementById('cb-domain-display').textContent = data.domain;
+const tagsContainer = document.getElementById('cb-tags-display');
+tagsContainer.innerHTML = '';
+data.tags.forEach(t => {
+const span = document.createElement('span');
+span.className = 'meta-tag-chip';
+span.textContent = t;
+tagsContainer.appendChild(span);
+});
+let sectionsHtml = `<div class="callout-box callout-info" style="margin-bottom:14px;"><strong>Theme Objective:</strong> ${escapeHtml(data.themeObj)}</div>`;
+data.sections.forEach(sec => {
+sectionsHtml += `<div class="modal-section"><div class="modal-section-h">${escapeHtml(sec.heading)}</div>`;
+if (sec.isList && Array.isArray(sec.content)) {
+sectionsHtml += '<ul>' + sec.content.map(item => `<li>${escapeHtml(item)}</li>`).join('') + '</ul>';
+} else {
+sectionsHtml += `<p>${escapeHtml(sec.content)}</p>`;
+}
+sectionsHtml += '</div>';
+});
+document.getElementById('cb-content').innerHTML = sectionsHtml;
+showModal('modal-challenge-viewer');
+}
+// Filter by Theme
+function applyThemeFilter(themeKey, btn) {
+document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+btn.classList.add('active');
+const cols = document.querySelectorAll('.theme-col');
+cols.forEach(col => {
+if (themeKey === 'all' || col.dataset.theme === themeKey) {
+col.style.display = 'flex';
+} else {
+col.style.display = 'none';
+}
+});
+}
+// Keyboard and click backdrop handling
+window.addEventListener('keydown', (e) => {
+if (e.key === 'Escape') {
+document.querySelectorAll('.modal-backdrop.is-active').forEach(m =>
+m.classList.remove('is-active'));
+document.body.style.overflow = 'auto';
+}
+});
+document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
+backdrop.addEventListener('click', (e) => {
+if (e.target === backdrop) {
+backdrop.classList.remove('is-active');
+document.body.style.overflow = 'auto';
+}
+});
+});
+</script>
+</body>
+</html>
